@@ -3,15 +3,15 @@ layout: nil
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
- 
+
  <title>Tiago Bastos</title>
- <link href="http://feeds.feedburner.com/Bastos" rel="self"/>
- <link href="http://bastost.com/"/>
+ <link href="http://blog.tiagobastos.me/atom.xml" rel="self"/>
+ <link href="http://blog.tiagobastos.me"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://tom.preston-werner.com/</id>
+ <id>http://blog.tiagobastos.me/</id>
  <author>
    <name>Tiago Bastos</name>
-   <email>_@bastost.com</email>
+   <email>code@tiagobastos.me</email>
  </author>
 
  {% for post in site.posts %}
@@ -19,9 +19,9 @@ layout: nil
    <title>{{ post.title }}</title>
    <link href="http://bastost.com{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://bastost.com{{ post.id }}</id>
+   <id>http://blog.tiagobastos.me{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
- 
+
 </feed>
